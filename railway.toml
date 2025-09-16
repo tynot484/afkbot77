@@ -1,0 +1,61 @@
+# 🚂 ملف تكوين Railway للبوت المتقدم
+
+[build]
+builder = "nixpacks"
+
+[deploy]
+numReplicas = 1
+sleepApplication = false
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5
+
+# متغيرات البيئة الافتراضية لـ Railway
+[env]
+NODE_ENV = "production"
+STEALTH_MODE = "true"
+PROTECTION_LEVEL = "high"
+DEBUG_MODE = "false"
+DAILY_REPORTS = "true"
+
+# إعدادات الصحة والمراقبة
+[healthcheck]
+httpPath = "/"
+httpPort = 3000
+initialDelaySeconds = 60
+intervalSeconds = 30
+timeoutSeconds = 10
+
+# إعدادات التوسع التلقائي
+[autoscaling]
+enabled = false
+minInstances = 1
+maxInstances = 1
+
+# إعدادات الشبكة
+[networking]
+allowPublic = false
+
+# إعدادات الموارد
+[resources]
+memoryGB = 0.5
+vCPUs = 0.5
+
+# إعدادات السجلات
+[logging]
+level = "info"
+format = "json"
+
+# تكوينات إضافية للنشر
+[railway]
+# تفعيل إعادة النشر التلقائي عند التحديث
+auto_deploy = true
+
+# فرع Git المستخدم للنشر
+branch = "main"
+
+# متغيرات البيئة المطلوبة (يجب إضافتها في لوحة Railway)
+# SERVER_HOST=justforlaugh.aternos.me
+# SERVER_PORT=19465
+# BOT_USERNAME=AFKBot_JFL
+# MC_VERSION=1.21.1
+# BOT_AUTH=offline
