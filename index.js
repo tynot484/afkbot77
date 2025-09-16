@@ -436,3 +436,15 @@ process.on('uncaughtException', (error) => {
     createAdvancedBot();
   }, 5000);
 });
+// ====== سيرفر صغير عشان UptimeRobot يقدر يراقب البوت ======
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Bot is running!');
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`🌐 سيرفر Uptime قيد التشغيل على المنفذ ${port}`);
+});
