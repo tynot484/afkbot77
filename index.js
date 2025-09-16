@@ -377,3 +377,27 @@ process.on('uncaughtException', (error) => {
     createAdvancedBot();
   }, 5000);
 });
+const express = require('express');
+const mc = require('minecraft-protocol');
+const config = require('./config.js');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+let bot; 
+// ... هنا تحط كل كود البوت اللي أرسلته بالضبط ...
+
+// مثلاً تضع دالة createAdvancedBot() وهكذا بدون تغيير
+
+// إضافة مسار أساسي ليرد على UptimeRobot
+app.get('/', (req, res) => {
+  res.send('Bot is running! ✅');
+});
+
+// تشغيل السيرفر
+app.listen(PORT, () => {
+  console.log(`🌐 Express server running on port ${PORT}`);
+});
+
+// بدء البوت
+createAdvancedBot();
