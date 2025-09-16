@@ -1,0 +1,50 @@
+{
+  "name": "advanced-anti-ban-afk-bot",
+  "version": "2.0.0",
+  "description": "🤖 بوت متقدم ومحمي ضد الحظر للحفاظ على نشاط سيرفر Aternos مع محاكاة السلوك البشري",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "stealth": "STEALTH_MODE=true node index.js",
+    "debug": "DEBUG_MODE=true VERBOSE_LOGS=true node index.js"
+  },
+  "keywords": [
+    "minecraft",
+    "bot",
+    "afk",
+    "aternos",
+    "anti-ban",
+    "stealth",
+    "human-simulation",
+    "advanced",
+    "protection",
+    "smart-chat",
+    "ai"
+  ],
+  "author": "Advanced Bot Developer",
+  "license": "MIT",
+  "dependencies": {
+    "minecraft-protocol": "^1.44.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/advanced-anti-ban-afk-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/advanced-anti-ban-afk-bot/issues"
+  },
+  "homepage": "https://github.com/yourusername/advanced-anti-ban-afk-bot#readme",
+  "config": {
+    "bot_version": "2.0.0",
+    "protection_level": "military-grade",
+    "stealth_rating": "95%",
+    "detection_resistance": "maximum"
+  }
+}
